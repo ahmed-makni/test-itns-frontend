@@ -1,0 +1,261 @@
+
+    <div class="row "  >
+        <div class="form-group col-md-1"  >
+            <input  [(ngModel)]="nom" id="search" type="text" >
+        </div>
+        <div class=" form-group ">
+            <button class="col-md-1 btn-success" (click)="OnclickSearch()"> search</button>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-md-4">
+      </div>
+        <div class="col-md-4">
+            <b  *ngIf="propect || society">Fiche contact &nbsp; : &nbsp; <span style="color: red">{{propect?.nom}} &nbsp;{{propect?.prenom}} </span>- &nbsp; <span style="color: red">{{society?.nom}}</span> </b>
+         </div>
+        <div class="col-md-4">
+
+         </div>
+    </div>
+
+<div >
+    <div  class="form-group col-md-4"  >
+        <label for="Nom">Nom</label>
+        <input [ngModel]="society?.nom" id="Nom" type="text" class="form-control">
+    </div>
+
+    <div class="form-group col-md-4" >
+        <label for="activite">Activité</label>
+        <input  [ngModel]="society?.activity" id="activite" type="text" class="form-control">
+    </div>
+
+    <div class="form-group col-md-3" >
+        <label for="secteur">Secteur</label>
+        <input [ngModel]="society?.sector" id="secteur" type="text" class="form-control">
+    </div>
+    <div class="form-group col-md-1" >
+        <label for="droits">Droits</label>
+        <input [ngModel]="society?.droits" id="droits" type="text" class="form-control">
+    </div>
+
+</div>
+
+
+    <div >
+        <div class="form-group col-md-4" >
+            <label for="address">Adresse</label>
+            <input [ngModel]="society?.address" id="address" type="text" class="form-control">
+        </div>
+
+
+        <div class="form-group col-md-2" >
+            <label for="codePostal">Code Postal</label>
+            <input [ngModel]="society?.codePostale" id="codePostal" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-2" >
+            <label for="ville">Ville</label>
+            <input [ngModel]="society?.ville" id="ville" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-4" >
+            <label for="notes">Notes</label>
+            <input [ngModel]="society?.notes" id="notes" type="text" class="form-control">
+        </div>
+
+    </div>
+
+    <div >
+        <div class="form-group col-md-2" >
+            <label for="tel1">Telephone</label>
+            <input [ngModel]="society?.tel1" id="tel1" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-2" >
+            <label for="tel2">Telephone</label>
+            <input [ngModel]="society?.tel2" id="tel2" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-4" >
+            <label for="precision">Précisions</label>
+            <input [ngModel]="society?.precision" id="precision" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-2" >
+            <label for="email">email</label>
+            <input [ngModel]="society?.email" id="email" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-2" >
+            <label for="linkedIn">LinkedIn</label>
+            <input [ngModel]="society?.linkedIn" id="linkedIn" type="text" class="form-control">
+        </div>
+    </div>
+
+<div class="row ">
+    <div class="col-md-6">
+
+        <div class="form-group col-md-12" >
+            <label for="titre">Titre</label>
+            <input  [ngModel]="propect?.titre" id="titre" type="text" class="form-control ">
+        </div>
+
+        <div class="form-group col-md-6 " >
+            <label for="nomm">Nom</label>
+            <input [ngModel]="propect?.nom" id="nomm" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-6" >
+            <label for="prenomm">Prenom</label>
+            <input [ngModel]="propect?.prenom" id="prenomm" type="text" class="form-control">
+        </div>
+
+        <div class="form-group col-md-3" >
+            <label for="telll">Telephone</label>
+            <input [ngModel]="propect?.tel" id="telll" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-6" >
+            <label for="em">Email</label>
+            <input [ngModel]="propect?.email" id="em" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-3" >
+            <label for="rap">Rappel</label>
+            <input [ngModel]="propect?.rappel" id="rap" type="Date" class="form-control">
+        </div>
+        <div class="form-group col-md-3" >
+            <label for="link">LinkedIn</label>
+            <input [ngModel]="propect?.linkedIn" id="link" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-12" >
+            <label for="obs">Observation</label>
+            <textarea [ngModel]="propect?.observations" id="obs" type="text" class="form-control">
+            </textarea>
+        </div>
+
+    </div>
+    <div class="col-md-6" >
+<!--        tableau observation-->
+
+            <h4 style="text-align: center;font-size: large"><b>Observation</b></h4>
+
+
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+            <table class="table table-bordered table-striped mb-0">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+<!--        tableau besoins-->
+        <button class="btn-success">
+            nouvelle conversation
+        </button>
+
+        <h4 style="text-align: center;font-size: large"><b>Besoins</b></h4>
+
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+            <table class="table table-bordered table-striped mb-0">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <button class="btn-success">
+            nouveau besoin
+        </button>
+    </div>
+</div>
+    <br/>
+    <div style="background-color: #cccccc" class="col-md-12">
+        <input  [(ngModel)]="nomEmploye" placeholder="recherche ..." type="text" class="col-md-2">
+        <button class="center-block" (click)="onclickSuivant()">suivant</button>
+    </div>
+
+

@@ -1,0 +1,12 @@
+.society{
+    background-color: #ccc;
+    padding: 20px
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
